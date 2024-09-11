@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オプションボタン選択</title>
+</head>
+<body>
+    <form id="myForm">
+        <p>好きな色を選んでください:</p>
+        <input type="radio" id="red" name="color" value="赤">
+        <label for="red">赤</label><br>
+        <input type="radio" id="blue" name="color" value="青">
+        <label for="blue">青</label><br>
+        <input type="radio" id="green" name="color" value="緑">
+        <label for="green">緑</label><br><br>
+        <button type="button" onclick="showSelectedOption()">選択を表示</button>
+    </form>
+
+    <script>
+        function showSelectedOption() {
+            // ラジオボタンの選択された値を取得
+            const selectedOption = document.querySelector('input[name="color"]:checked');
+            
+            if (selectedOption) {
+                // 選択された項目をアラートボックスに表示
+                alert("選ばれた色は: " + selectedOption.value);
+            } else {
+                alert("色が選ばれていません");
+            }
+        }
+    </script>
+</body>
+</html>
+

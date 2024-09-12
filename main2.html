@@ -7,15 +7,15 @@
 </head>
 <body>
     <form id="myForm">
-        <p>好きな果物を選んでください（複数選択可）:</p>
-        <input type="checkbox" id="apple" name="fruit" value="りんご">
-        <label for="apple">りんご</label><br>
-        <input type="checkbox" id="banana" name="fruit" value="バナナ">
-        <label for="banana">バナナ</label><br>
-        <input type="checkbox" id="orange" name="fruit" value="オレンジ">
-        <label for="orange">オレンジ</label><br>
-        <input type="checkbox" id="grape" name="fruit" value="ぶどう">
-        <label for="grape">ぶどう</label><br><br>
+        <p>チェックボタン（複数選択可）:</p>
+        <input type="checkbox" id="apple" name="fruit" value="１">
+        <label for="apple">１</label><br>
+        <input type="checkbox" id="banana" name="fruit" value="２">
+        <label for="banana">２</label><br>
+        <input type="checkbox" id="orange" name="fruit" value="３">
+        <label for="orange">３</label><br>
+        <input type="checkbox" id="grape" name="fruit" value="４">
+        <label for="grape">４</label><br><br>
         <button type="button" onclick="showSelectedOptions()">選択を表示</button>
     </form>
 
@@ -34,7 +34,7 @@
                 // 選択された項目をダイアログボックスに表示
                 alert("選ばれた果物: " + selectedValues.join(", "));
             } else {
-                alert("果物が選ばれていません");
+                alert("選ばれていません");
             }
         }
     </script>

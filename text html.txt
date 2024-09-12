@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テキストボックスの内容を表示</title>
+    <script>
+        function showDialog() {
+            // テキストボックスの要素を取得
+            var textboxValue = document.getElementById('myTextbox').value;
+            
+            // ダイアログボックスを表示
+            alert(textboxValue);
+        }
+    </script>
+</head>
+<body>
+    <h1>テキストボックスの内容をダイアログで表示</h1>
+    <input type="text" id="myTextbox" placeholder="ここに入力">
+    <button onclick="showDialog()">表示</button>
+</body>
+</html>

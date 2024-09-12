@@ -7,13 +7,13 @@
 </head>
 <body>
     <form id="myForm">
-        <p>好きな色を選んでください:</p>
-        <input type="radio" id="red" name="color" value="赤">
-        <label for="red">赤</label><br>
-        <input type="radio" id="blue" name="color" value="青">
-        <label for="blue">青</label><br>
-        <input type="radio" id="green" name="color" value="緑">
-        <label for="green">緑</label><br><br>
+        <p>オプションボタン:</p>
+        <input type="radio" id="１" name="number" value="１">
+        <label for="red">１</label><br>
+        <input type="radio" id="２" name="number" value="２">
+        <label for="blue">２</label><br>
+        <input type="radio" id="３" name="number" value="３">
+        <label for="green">３</label><br><br>
         <button type="button" onclick="showSelectedOption()">選択を表示</button>
     </form>
 
@@ -24,9 +24,9 @@
             
             if (selectedOption) {
                 // 選択された項目をアラートボックスに表示
-                alert("選ばれた色は: " + selectedOption.value);
+                alert("選ばれたのは: " + selectedOption.value);
             } else {
-                alert("色が選ばれていません");
+                alert("選ばれていません");
             }
         }
     </script>

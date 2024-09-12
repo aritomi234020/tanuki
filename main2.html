@@ -9,20 +9,20 @@
     <form id="myForm">
         <p>チェックボタン（複数選択可）:</p>
         <input type="checkbox" id="１" name="number" value="１">
-        <label for="apple">１</label><br>
+        <label for="１">１</label><br>
         <input type="checkbox" id="２" name="number" value="２">
-        <label for="banana">２</label><br>
+        <label for="２">２</label><br>
         <input type="checkbox" id="３" name="number" value="３">
-        <label for="orange">３</label><br>
+        <label for="３">３</label><br>
         <input type="checkbox" id="４" name="number" value="４">
-        <label for="grape">４</label><br><br>
+        <label for="４">４</label><br><br>
         <button type="button" onclick="showSelectedOptions()">選択を表示</button>
     </form>
 
     <script>
         function showSelectedOptions() {
             // チェックボックスの選択された項目をすべて取得
-            const selectedOptions = document.querySelectorAll('input[name="fruit"]:checked');
+            const selectedOptions = document.querySelectorAll('input[name="number"]:checked');
             let selectedValues = [];
 
             // 選ばれた値を配列に追加
@@ -32,7 +32,7 @@
 
             if (selectedValues.length > 0) {
                 // 選択された項目をダイアログボックスに表示
-                alert("選ばれた果物: " + selectedValues.join(", "));
+                alert("選ばれたのは: " + selectedValues.join(", "));
             } else {
                 alert("選ばれていません");
             }

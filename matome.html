@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head>
+    <meta charset="UTF-8">
+    <title>Image Display</title>
+ </head>
+  <style>
+
+            #man {
+            position: absolute;
+            top: 150px;
+            left: 550px;
+        }
+        #hairImg {
+	    position: absolute;
+            top: 153px;
+            left: 500px;
+        }
+	 #newhairImg {
+	    position: absolute;
+            top: 100px;
+            left: 530px;
+        }
+
+  </style>
+  <body>
+    <img id="man" src="man.gif" alt="man image">
+    <img id="hairImg" src="hair.gif" alt="hair image">
+    <img id="newhairImg" src="newhair.gif" alt="newhair">
+
+     <h1></h1>
+    
+    <label for="textbox">テキストボックス:</label>
+    <input type="text" id="textbox" name="textbox">
+
+    <h2>オプションボタン</h2>
+<form>
+    <label>
+        <input type="radio" name="option" value="option1">
+        オプション 1
+    </label><br>
+    <label>
+        <input type="radio" name="option" value="option2">
+        オプション 2
+    </label><br>
+    <label>
+        <input type="radio" name="option" value="option3">
+        オプション 3
+    </label>
+</form>
+
+<h2>チェックボックス</h2>
+<form>
+    <label>
+        <input type="checkbox" name="checkbox1" value="check1">
+        チェック 1
+    </label><br>
+    <label>
+        <input type="checkbox" name="checkbox2" value="check2">
+        チェック 2
+    </label><br>
+    <label>
+        <input type="checkbox" name="checkbox3" value="check3">
+        チェック 3
+    </label>
+</form>
+
+<form id="myForm">
+        <p>オプションボタン:</p>
+        <input type="radio" id="１" name="number" value="１">
+        <label for="red">１</label><br>
+        <input type="radio" id="２" name="number" value="２">
+        <label for="blue">２</label><br>
+        <input type="radio" id="３" name="number" value="３">
+        <label for="green">３</label><br><br>
+        <button type="button" onclick="showSelectedOption()">選択を表示</button>
+    </form>
+
+    <script>
+        function showSelectedOption() {
+            // ラジオボタンの選択された値を取得
+            const selectedOption = document.querySelector('input[name="number"]:checked');
+            
+            if (selectedOption) {
+                // 選択された項目をアラートボックスに表示
+                alert("選ばれたのは: " + selectedOption.value);
+            } else {
+                alert("選ばれていません");
+            }
+        }
+    </script>
+
+     <form id="myForm">
+        <p>チェックボタン（複数選択可）:</p>
+        <input type="checkbox" id="１" name="number" value="１">
+        <label for="１">１</label><br>
+        <input type="checkbox" id="２" name="number" value="２">
+        <label for="２">２</label><br>
+        <input type="checkbox" id="３" name="number" value="３">
+        <label for="３">３</label><br>
+        <input type="checkbox" id="４" name="number" value="４">
+        <label for="４">４</label><br><br>
+        <button type="button" onclick="showSelectedOptions()">選択を表示</button>
+    </form>
+
+    <script>
+        function showSelectedOptions() {
+            // チェックボックスの選択された項目をすべて取得
+            const selectedOptions = document.querySelectorAll('input[name="number"]:checked');
+            let selectedValues = [];
+
+            // 選ばれた値を配列に追加
+            selectedOptions.forEach(option => {
+                selectedValues.push(option.value);
+            });
+
+            if (selectedValues.length > 0) {
+                // 選択された項目をダイアログボックスに表示
+                alert("選ばれたのは: " + selectedValues.join(", "));
+            } else {
+                alert("選ばれていません");
+            }
+        }
+    </script>
+     <!-- ボタンの作成 -->
+    <button type="button">クリックしてね！</button>
+
+    <script>
+        function showDialog() {
+            // テキストボックスの要素を取得
+            var textboxValue = document.getElementById('myTextbox').value;
+            
+            // ダイアログボックスを表示
+            alert(textboxValue);
+        }
+    </script>
+
+    <h1>テキストボックスの内容をダイアログで表示</h1>
+    <input type="text" id="myTextbox" placeholder="ここに入力">
+    <button onclick="showDialog()">表示</button>
+
+  </body>
+</html>

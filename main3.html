@@ -1,0 +1,59 @@
+<body>
+    <form id="myForm">
+        <p>オプションボタン:</p>
+        <input type="radio" id="１" name="number" value="１">
+        <label for="red">１</label><br>
+        <input type="radio" id="２" name="number" value="２">
+        <label for="blue">２</label><br>
+        <input type="radio" id="３" name="number" value="３">
+        <label for="green">３</label><br><br>
+        <button type="button" onclick="showSelectedOption()">選択を表示</button>
+    </form>
+
+    <script>
+        function showSelectedOption() {
+            // ラジオボタンの選択された値を取得
+            const selectedOption = document.querySelector('input[name="number"]:checked');
+            
+            if (selectedOption) {
+                // 選択された項目をアラートボックスに表示
+                alert("選ばれたのは: " + selectedOption.value);
+            } else {
+                alert("選ばれていません");
+            }
+        }
+    </script>
+   <form id="myForm">
+        <p>チェックボタン（複数選択可）:</p>
+        <input type="checkbox" id="１" name="number" value="１">
+        <label for="１">１</label><br>
+        <input type="checkbox" id="２" name="number" value="２">
+        <label for="２">２</label><br>
+        <input type="checkbox" id="３" name="number" value="３">
+        <label for="３">３</label><br>
+        <input type="checkbox" id="４" name="number" value="４">
+        <label for="４">４</label><br><br>
+        <button type="button" onclick="showSelectedOptions()">選択を表示</button>
+    </form>
+
+    <script>
+        function showSelectedOptions() {
+            // チェックボックスの選択された項目をすべて取得
+            const selectedOptions = document.querySelectorAll('input[name="number"]:checked');
+            let selectedValues = [];
+
+            // 選ばれた値を配列に追加
+            selectedOptions.forEach(option => {
+                selectedValues.push(option.value);
+            });
+
+            if (selectedValues.length > 0) {
+                // 選択された項目をダイアログボックスに表示
+                alert("選ばれたのは: " + selectedValues.join(", "));
+            } else {
+                alert("選ばれていません");
+            }
+        }
+    </script>
+  
+</body>
